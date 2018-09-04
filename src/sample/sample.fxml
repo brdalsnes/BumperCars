@@ -3,40 +3,36 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.shape.Circle?>
 
 <BorderPane fx:id="border" fx:controller="sample.Controller"
             xmlns:fx="http://javafx.com/fxml" onKeyPressed="#handleKeyPressed" onKeyReleased="#handleKeyReleased">
 
     <top>
         <StackPane>
-            <Rectangle width="${border.width}" height="40" fill="navy"/>
-            <Label fx:id="score" text="0 - 0" style="-fx-font-size: 24" textFill="yellow"/>
+            <Rectangle fx:id="h1" width="${border.width}" height="40" fill="navy"/>
+            <Label fx:id="score" text="0 - 0" style="-fx-font-size: 28" textFill="yellow"/>
         </StackPane>
     </top>
     <bottom>
-        <Rectangle width="${border.width}" height="40" fill="navy"/>
+        <Rectangle fx:id="h2" width="${border.width}" height="40" fill="navy"/>
     </bottom>
     <left>
-        <VBox>
-            <Rectangle width="40" height="${(border.height-80)*0.35}" fill="navy"/>
-            <Rectangle width="40" height="${(border.height-80)*0.3}" fill="skyblue"/>
-            <Rectangle width="40" height="${(border.height-80)*0.35}" fill="navy"/>
+        <VBox fx:id="v1">
+            <Rectangle fx:id="s1" width="40" height="${(border.height-80)*0.35}" fill="navy"/>
+            <Rectangle fx:id="g1" width="40" height="${(border.height-80)*0.3}" fill="skyblue"/>
+            <Rectangle fx:id="s2" width="40" height="${(border.height-80)*0.35}" fill="navy"/>
         </VBox>
     </left>
     <right>
-        <VBox>
-            <Rectangle width="40" height="${(border.height-80)*0.35}" fill="navy"/>
-            <Rectangle width="40" height="${(border.height-80)*0.3}" fill="skyblue"/>
-            <Rectangle width="40" height="${(border.height-80)*0.35}" fill="navy"/>
+        <VBox fx:id="v2">
+            <Rectangle fx:id="s3" width="40" height="${(border.height-80)*0.35}" fill="navy"/>
+            <Rectangle fx:id="g2" width="40" height="${(border.height-80)*0.3}" fill="skyblue"/>
+            <Rectangle fx:id="s4" width="40" height="${(border.height-80)*0.35}" fill="navy"/>
         </VBox>
     </right>
 
     <center>
-        <StackPane>
-            <Rectangle fx:id="playerView" translateX="-300" width="80" height="40" arcHeight="20" arcWidth="20" fill="green"/>
-            <Rectangle fx:id="opponentView" translateX="300" width="80" height="40" arcHeight="20" arcWidth="20" fill="maroon"/>
-            <Circle fx:id="ball" radius="10" fill="black"/>
+        <StackPane fx:id="field">
         </StackPane>
     </center>
 
