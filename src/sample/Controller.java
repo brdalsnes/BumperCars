@@ -18,7 +18,7 @@ import java.util.Set;
 
 public class Controller {
 
-    
+
     protected final static double MAX_ACCELERATION = 0.1;
     protected final static double MAX_TURN = 1;
     private final static int START_X = 300;
@@ -186,7 +186,6 @@ public class Controller {
     private void checkGoal(){
         //Checks if the entire ball is outside the field to register goal
         if(Math.abs(ball.getView().getTranslateX()) > ((field.getWidth()/2) + 2*ball.getRadius())){
-            System.out.println("GOAL!!!!");
             if(ball.getView().getTranslateX() < 0){
                 leftGoal++;
             }else{
